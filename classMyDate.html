@@ -29,27 +29,24 @@
             return this.year;
         }
 
-        setDay(myDay) {
-            return this.day = myDay;
+        setDate(myDay, myMonth, myYear) {
+            this.day = myDay;
+            this.month = myMonth;
+            this.year = myYear;
         }
 
-        setMonth(myMonth) {
-            return this.month = myMonth;
-        }
-
-        setYear(myYear) {
-            return this.year = myYear;
+        toString(myDay, myMonth, myYear) {
+            return `${myDay}/${myMonth}/${myYear}`;
         }
     }
 
     let newDate = new MyDate(2, 2, 2007);
-    newDate.setDay(10);
-    newDate.setMonth(10);
-    newDate.setYear(2019);
+    console.log(newDate);
+    newDate.setDate(10, 10, 2019);
     let day = newDate.getDay();
     let month = newDate.getMonth();
     let year = newDate.getYear();
-    alert(`Ngày ${day} tháng ${month} năm ${year}`);
+    alert(newDate.toString(day, month, year));
 </script>
 </body>
 </html>
